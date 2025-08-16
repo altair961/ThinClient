@@ -1,5 +1,5 @@
-# Created by https://www.toptal.com/developers/gitignore/api/c++,android,androidstudio,kotlin,java,cmake
-# Edit at https://www.toptal.com/developers/gitignore?templates=c++,android,androidstudio,kotlin,java,cmake
+# Created by https://www.toptal.com/developers/gitignore/api/android,androidstudio,c++,cmake,gradle,java,c
+# Edit at https://www.toptal.com/developers/gitignore?templates=android,androidstudio,c++,cmake,gradle,java,c
 
 ### Android ###
 # Gradle files
@@ -42,24 +42,69 @@ gen-external-apklibs
 # Replacement of .externalNativeBuild directories introduced
 # with Android Studio 3.5.
 
-### C++ ###
+### C ###
 # Prerequisites
 *.d
 
-# Compiled Object files
-*.slo
-*.lo
+# Object files
 *.o
+*.ko
 *.obj
+*.elf
+
+# Linker output
+*.ilk
+*.map
+*.exp
 
 # Precompiled Headers
 *.gch
 *.pch
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
+# Libraries
+*.lib
+*.a
+*.la
+*.lo
+
+# Shared objects (inc. Windows DLLs)
 *.dll
+*.so
+*.so.*
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# Kernel Module Compile Results
+*.mod*
+*.cmd
+.tmp_versions/
+modules.order
+Module.symvers
+Mkfile.old
+dkms.conf
+
+### C++ ###
+# Prerequisites
+
+# Compiled Object files
+*.slo
+
+# Precompiled Headers
+
+# Compiled Dynamic libraries
 
 # Fortran module files
 *.mod
@@ -67,14 +112,8 @@ gen-external-apklibs
 
 # Compiled Static libraries
 *.lai
-*.la
-*.a
-*.lib
 
 # Executables
-*.exe
-*.out
-*.app
 
 ### CMake ###
 CMakeLists.txt.user
@@ -120,18 +159,31 @@ CMakeUserPresets.json
 hs_err_pid*
 replay_pid*
 
-### Kotlin ###
-# Compiled class file
+### Gradle ###
+.gradle
+**/build/
+!src/**/build/
 
-# Log file
+# Ignore Gradle GUI config
+gradle-app.setting
 
-# BlueJ files
+# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
+!gradle-wrapper.jar
 
-# Mobile Tools for Java (J2ME)
+# Avoid ignore Gradle wrappper properties
+!gradle-wrapper.properties
 
-# Package Files #
+# Cache of project
+.gradletasknamecache
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+# Eclipse Gradle plugin generated files
+# Eclipse Core
+.project
+# JDT-specific (Eclipse Java Development Tools)
+.classpath
+
+### Gradle Patch ###
+# Java heap dump
 
 ### AndroidStudio ###
 # Covers files to be ignored for android development using Android Studio.
@@ -151,7 +203,6 @@ gen/
 out/
 
 # Gradle files
-.gradle
 
 # Signing files
 .signing/
@@ -218,8 +269,6 @@ obj/
 .idea/navEditor.xml
 
 # Legacy Eclipse project files
-.classpath
-.project
 .cproject
 .settings/
 
@@ -250,4 +299,4 @@ fabric.properties
 
 !/gradle/wrapper/gradle-wrapper.jar
 
-# End of https://www.toptal.com/developers/gitignore/api/c++,android,androidstudio,kotlin,java,cmake
+# End of https://www.toptal.com/developers/gitignore/api/android,androidstudio,c++,cmake,gradle,java,c
