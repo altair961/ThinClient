@@ -3,30 +3,32 @@ plugins {
 }
 
 android {
-    compileSdkVersion 34
-    ndkVersion "26.2.11394342"  // Use latest from NDK Manager
+    namespace 'com.example.nativeactivity'
+    compileSdk 34
 
     defaultConfig {
-        applicationId "com.example.nativeapp"
-        minSdkVersion 24
-        targetSdkVersion 34
+        applicationId "com.example.nativeactivity"
+        minSdk 24
+        targetSdk 34
         versionCode 1
         versionName "1.0"
         externalNativeBuild {
             cmake {
                 arguments "-DANDROID_STL=c++_static"
+                cppFlags "-std=c++17"
             }
-        }
-    }
-    externalNativeBuild {
-        cmake {
-            path "src/main/CMakeLists.txt"
         }
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    externalNativeBuild {
+        cmake {
+            path "src/main/CMakeLists.txt"
+            version "3.22.1"
         }
     }
 }
